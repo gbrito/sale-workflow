@@ -28,7 +28,8 @@ class TestSaleDeliveryBlock(common.TransactionCase):
         # Create product:
         prod_dict = {
             "name": "test product",
-            "type": "product",
+            "type": "consu",
+            "is_storable": True,
         }
         product = cls.env["product.product"].with_user(cls.user_test).create(prod_dict)
         # Create Sale order:
